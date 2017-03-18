@@ -1,0 +1,43 @@
+{
+  "name": "micro-rollbar",
+  "version": "0.1.0",
+  "description": "Rollbar error handler for Zeit's Micro",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "Brent Mealhouse <bmealhouse@gmail.com>",
+  "engines": {
+    "node": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmealhouse/micro-rollbar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bmealhouse/micro-rollbar/issues"
+  },
+  "homepage": "https://github.com/bmealhouse/micro-rollbar#readme",
+  "keywords": [
+    "micro",
+    "rollbar"
+  ],
+  "files": [
+    "lib/index.js"
+  ],
+  "scripts": {
+    "precommit": "npm test",
+    "prepush": "npm test",
+    "test": "xo"
+  },
+  "dependencies": {
+    "micro": "7.1.0",
+    "rollbar": "0.6.5"
+  },
+  "devDependencies": {
+    "husky": "0.13.2",
+    "xo": "0.18.0"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false
+  }
+}
