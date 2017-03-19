@@ -1,6 +1,6 @@
 {
   "name": "micro-rollbar",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Rollbar error handler for Zeit's Micro",
   "main": "lib/index.js",
   "license": "MIT",
