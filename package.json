@@ -29,7 +29,7 @@
     "test": "xo"
   },
   "dependencies": {
-    "micro": "7.3.1",
+    "micro": "7.3.2",
     "rollbar": "0.6.5"
   },
   "devDependencies": {
