@@ -3,14 +3,55 @@
   "version": "0.2.0",
   "description": "Rollbar error handler for Zeit's Micro",
   "main": "lib/index.js",
-  "license": "MIT",
+  "repository": "https://github.com/bmealhouse/micro-rollbar.git",
   "author": "Brent Mealhouse <bmealhouse@gmail.com>",
+  "license": "MIT",
   "engines": {
     "node": ">=6"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bmealhouse/micro-rollbar.git"
+  "files": [
+    "lib/index.js"
+  ],
+  "scripts": {
+    "build": "npm run lint && npm test",
+    "lint": "xo",
+    "precommit": "npm run lint && lint-staged",
+    "prepush": "npm run build",
+    "test": "NODE_ENV=test nyc ava -v"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --no-semi --single-quote --no-bracket-spacing --write",
+      "git add"
+    ]
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false,
+    "rules": {
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "never",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "micro": "7.3.2",
+    "rollbar": "0.6.5"
+  },
+  "devDependencies": {
+    "ava": "0.19.1",
+    "husky": "0.13.3",
+    "lint-staged": "3.4.0",
+    "nock": "9.0.13",
+    "node-fetch": "1.6.3",
+    "prettier": "1.1.0",
+    "test-listen": "1.0.2",
+    "xo": "0.18.1"
   },
   "bugs": {
     "url": "https://github.com/bmealhouse/micro-rollbar/issues"
@@ -19,25 +60,5 @@
   "keywords": [
     "micro",
     "rollbar"
-  ],
-  "files": [
-    "lib/index.js"
-  ],
-  "scripts": {
-    "precommit": "npm test",
-    "prepush": "npm test",
-    "test": "xo"
-  },
-  "dependencies": {
-    "micro": "7.3.2",
-    "rollbar": "0.6.5"
-  },
-  "devDependencies": {
-    "husky": "0.13.3",
-    "xo": "0.19.0"
-  },
-  "xo": {
-    "space": true,
-    "semicolon": false
-  }
+  ]
 }
