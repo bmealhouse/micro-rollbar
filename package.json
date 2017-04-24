@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "micro": "7.3.2",
-    "rollbar": "0.6.5"
+    "rollbar": "2.0.0-alpha.4"
   },
   "devDependencies": {
     "ava": "0.19.1",
