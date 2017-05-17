@@ -46,7 +46,7 @@
   "devDependencies": {
     "ava": "0.19.1",
     "husky": "0.13.3",
-    "lint-staged": "3.4.1",
+    "lint-staged": "3.4.2",
     "nock": "9.0.13",
     "node-fetch": "1.6.3",
     "nyc": "10.3.2",
