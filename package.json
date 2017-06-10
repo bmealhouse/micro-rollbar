@@ -1,6 +1,6 @@
 {
   "name": "micro-rollbar",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Rollbar error handler for Zeit's Micro",
   "main": "lib/index.js",
   "repository": "https://github.com/bmealhouse/micro-rollbar.git",
@@ -32,8 +32,12 @@
     ]
   },
   "xo": {
-    "envs": ["jest"],
-    "extends": ["prettier"]
+    "envs": [
+      "jest"
+    ],
+    "extends": [
+      "prettier"
+    ]
   },
   "dependencies": {
     "micro": "7.3.3"
