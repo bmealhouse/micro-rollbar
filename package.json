@@ -26,18 +26,9 @@
     ]
   },
   "xo": {
-    "space": true,
-    "semicolon": false,
-    "rules": {
-      "space-before-function-paren": [
-        "error",
-        {
-          "anonymous": "never",
-          "named": "never",
-          "asyncArrow": "always"
-        }
-      ]
-    }
+    "extends": [
+      "prettier"
+    ]
   },
   "dependencies": {
     "micro": "7.3.3",
@@ -45,14 +36,18 @@
   },
   "devDependencies": {
     "ava": "0.19.1",
-    "husky": "0.13.3",
+    "eslint-config-prettier": "2.1.1",
+    "husky": "0.13.4",
     "lint-staged": "3.6.0",
     "nock": "9.0.13",
     "node-fetch": "1.7.1",
     "nyc": "11.0.2",
     "prettier": "1.4.4",
     "test-listen": "1.0.2",
-    "xo": "0.18.1"
+    "xo": "0.18.2"
+  },
+  "peerDependencies": {
+    "rollbar": "^2.0.4"
   },
   "bugs": {
     "url": "https://github.com/bmealhouse/micro-rollbar/issues"

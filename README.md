@@ -33,20 +33,20 @@ Using the global error handler with additional options:
 ```js
 const {send} = require('micro')
 const microRollbar = require('micro-rollbar')
-const rollbar = require('rollbar')
+const Rollbar = require('rollbar')
 
 // See all available options here:
-// https://github.com/rollbar/node_rollbar#configuration-reference
+// https://github.com/rollbar/rollbar.js#server-configuration
 const errorHandler = microRollbar('ROLLBAR_ACCESS_TOKEN', {
   environment: process.env.NODE_ENV || 'development'
 })
 
 module.exports = errorHandler(async (req, res) => {
-  rollbar.reportMessage('Reported to rollbar', 'info')
+  Rollbar.info('Reported to rollbar')
 
-  // If you are also using the rollbar package, ensure that rollbar.wait()
+  // If you are also using the rollbar package, ensure that Rollbar.wait()
   // is called before sending your response.
-  rollbar.wait(() => {
+  Rollbar.wait(() => {
     send(res, 200, 'Ready!')
   })
 })
