@@ -38,7 +38,7 @@
     "ava": "0.19.1",
     "eslint-config-prettier": "2.1.1",
     "husky": "0.13.4",
-    "lint-staged": "3.6.0",
+    "lint-staged": "3.6.1",
     "nock": "9.0.13",
     "node-fetch": "1.7.1",
     "nyc": "11.0.2",
