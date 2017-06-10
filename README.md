@@ -20,8 +20,11 @@ Using the global error handler:
 ```js
 const {createError} = require('micro')
 const microRollbar = require('micro-rollbar')
+const Rollbar = require('rollbar')
 
-const errorHandler = microRollbar('ROLLBAR_ACCESS_TOKEN')
+const errorHandler = microRollbar(Rollbar)({
+  accessToken: 'ROLLBAR_ACCESS_TOKEN'
+})
 
 module.exports = errorHandler(async (req, res) => {
   throw createError(500, 'Reported to rollbar')
@@ -35,17 +38,19 @@ const {send} = require('micro')
 const microRollbar = require('micro-rollbar')
 const Rollbar = require('rollbar')
 
-// See all available options here:
-// https://github.com/rollbar/rollbar.js#server-configuration
-const errorHandler = microRollbar('ROLLBAR_ACCESS_TOKEN', {
-  environment: process.env.NODE_ENV || 'development'
+// See Rollbar documentation for available options.
+// https://rollbar.com/docs/notifier/rollbar.js/#standalone
+const errorHandler = microRollbar(Rollbar)({
+  accessToken: 'ROLLBAR_ACCESS_TOKEN',
+  environment: process.env.NODE_ENV || 'development',
+  host: 'app.domain.com',
+  enabled: process.env.NODE_ENV !== 'test'
 })
 
 module.exports = errorHandler(async (req, res) => {
   Rollbar.info('Reported to rollbar')
 
-  // If you are also using the rollbar package, ensure that Rollbar.wait()
-  // is called before sending your response.
+  // Ensure that Rollbar.wait() is called before sending a response.
   Rollbar.wait(() => {
     send(res, 200, 'Ready!')
   })

@@ -15,34 +15,38 @@
   "scripts": {
     "build": "npm run lint && npm test",
     "lint": "xo",
-    "precommit": "npm run lint && lint-staged",
+    "precommit": "lint-staged",
     "prepush": "npm run build",
-    "test": "NODE_ENV=test nyc ava -v"
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "testEnvironment": "node",
+    "verbose": true
   },
   "lint-staged": {
     "*.js": [
+      "npm run lint",
       "prettier --no-semi --single-quote --no-bracket-spacing --write",
       "git add"
     ]
   },
   "xo": {
-    "extends": [
-      "prettier"
-    ]
+    "envs": ["jest"],
+    "extends": ["prettier"]
   },
   "dependencies": {
-    "micro": "7.3.3",
-    "rollbar": "2.0.4"
+    "micro": "7.3.3"
   },
   "devDependencies": {
-    "ava": "0.19.1",
     "eslint-config-prettier": "2.1.1",
     "husky": "0.13.4",
+    "jest": "20.0.4",
     "lint-staged": "3.6.1",
     "nock": "9.0.13",
     "node-fetch": "1.7.1",
-    "nyc": "11.0.2",
     "prettier": "1.4.4",
+    "rollbar": "2.0.4",
     "test-listen": "1.0.2",
     "xo": "0.18.2"
   },
