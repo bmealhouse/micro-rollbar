@@ -10,7 +10,8 @@
     "node": ">=6.11.0"
   },
   "files": [
-    "lib/index.js"
+    "lib/index.js",
+    "lib/logger.js"
   ],
   "scripts": {
     "build": "npm run lint && npm test",
