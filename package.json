@@ -51,7 +51,7 @@
     "lint-staged": "4.0.0",
     "nock": "9.0.13",
     "node-fetch": "1.7.1",
-    "prettier": "1.5.1",
+    "prettier": "1.5.2",
     "test-listen": "1.0.2",
     "xo": "0.18.2"
   },
