@@ -14,10 +14,8 @@
     "lib/logger.js"
   ],
   "scripts": {
-    "build": "npm run lint && npm test",
-    "lint": "xo",
     "precommit": "lint-staged",
-    "prepush": "npm run build",
+    "prepush": "xo && npm test",
     "test": "jest"
   },
   "jest": {
@@ -27,7 +25,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint",
+      "xo",
       "prettier --no-semi --single-quote --no-bracket-spacing --write",
       "git add"
     ]
@@ -41,7 +39,7 @@
     ]
   },
   "dependencies": {
-    "micro": "7.3.3",
+    "micro": "8.0.1",
     "rollbar": "2.1.1"
   },
   "devDependencies": {
