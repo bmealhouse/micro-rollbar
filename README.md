@@ -51,3 +51,26 @@ module.exports = errorHandler(async (req, res) => {
   send(res, 200, 'Ready!')
 })
 ```
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars0.githubusercontent.com/u/3741255?v=3" width="100px;"/><br /><sub>Brent Mealhouse</sub>](https://twitter.com/bmealhouse)<br />[💻](https://github.com/bmealhouse/micro-rollbar/commits?author=bmealhouse "Code") [📖](https://github.com/bmealhouse/micro-rollbar/commits?author=bmealhouse "Documentation") [⚠️](https://github.com/bmealhouse/micro-rollbar/commits?author=bmealhouse "Tests") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+
+## Contributing
+
+1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
+2. Install the dependencies: `yarn`
+3. Link the package to the global module directory: `yarn link`
+4. Run `yarn test -- --watch` and start making your changes
+5. You can use `yarn link micro-rollbar` to test your changes in an actual project
+
+## LICENSE
+
+MIT
