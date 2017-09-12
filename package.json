@@ -40,7 +40,7 @@
     ]
   },
   "dependencies": {
-    "micro": "8.0.4",
+    "micro": "9.0.0",
     "rollbar": "2.2.7"
   },
   "devDependencies": {
