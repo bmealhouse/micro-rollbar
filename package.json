@@ -51,7 +51,7 @@
     "nock": "9.0.27",
     "node-fetch": "1.7.3",
     "prettier": "1.7.4",
-    "release": "2.5.2",
+    "release": "2.5.3",
     "test-listen": "1.0.2",
     "xo": "0.18.2"
   },
