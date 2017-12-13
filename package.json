@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "micro": "9.0.2",
-    "rollbar": "2.3.2"
+    "rollbar": "2.3.3"
   },
   "devDependencies": {
     "eslint-config-prettier": "2.9.0",
